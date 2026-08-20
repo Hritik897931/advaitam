@@ -25,26 +25,30 @@ const pillars = [
 
 export default function Philosophy() {
   return (
-    <section id="philosophy" className="bg-cream px-6 py-24 sm:px-10 sm:py-32">
-      <div className="mx-auto max-w-5xl text-center">
-        <p className="eyebrow text-brass">Our Philosophy</p>
+    <section id="philosophy" className="relative overflow-hidden bg-cream px-6 py-12 sm:px-10 sm:py-16">
+      
+      {/* Background Watermark */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5">
+        <Leaf size={600} strokeWidth={0.5} className="text-brass" />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-5xl text-center">
+        <p className="eyebrow text-brass uppercase tracking-[0.15em] text-[11px] font-semibold">OUR PHILOSOPHY</p>
 
         <h2 className="mt-4 font-display text-4xl leading-tight text-charcoal sm:text-5xl">
-          Beyond real estate.
-          <br />
-          We create <span className="italic text-brass">legacies</span>.
+          Beyond Real Estate. We Create Legacies.
         </h2>
 
-        <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-x-6 gap-y-14 sm:grid-cols-4 sm:gap-x-8">
+        <div className="mx-auto mt-12 flex max-w-5xl flex-col gap-14 sm:flex-row sm:divide-x sm:divide-charcoal/10 sm:gap-0">
           {pillars.map((p) => (
-            <div key={p.title} className="group flex flex-col items-center">
-              <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border border-charcoal/15 text-brass transition-colors duration-300 group-hover:border-brass group-hover:bg-brass/10">
-                <p.icon size={20} strokeWidth={1.5} />
+            <div key={p.title} className="group flex flex-1 flex-col items-center px-4 text-center">
+              <span className="mb-6 flex text-brass transition-transform duration-300 group-hover:scale-110">
+                <p.icon size={28} strokeWidth={1.5} />
               </span>
-              <h3 className="text-[13px] font-semibold tracking-[0.04em] text-charcoal">
+              <h3 className="font-display text-[15px] tracking-wide text-charcoal">
                 {p.title}
               </h3>
-              <p className="mt-2 text-[13px] leading-relaxed text-stone">
+              <p className="mx-auto mt-3 max-w-[200px] text-[13px] leading-relaxed text-stone">
                 {p.copy}
               </p>
             </div>

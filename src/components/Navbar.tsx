@@ -23,22 +23,22 @@ export default function Navbar() {
           <Image
             src="/Advaitam-Logo.png"
             alt="Advaitam Logo"
-            width={240}
-            height={64}
-            className="h-10 w-auto object-contain sm:h-12 lg:h-14"
+            width={160}
+            height={48}
+            className="h-6 w-auto object-contain sm:h-7 lg:h-8"
             priority
           />
-          <span className="mt-1.5 hidden text-[8px] tracking-[0.35em] text-ivory/70 sm:block">
+          <span className="mt-1 hidden text-[7px] tracking-[0.35em] text-ivory/70 sm:block">
             - BUILDING DESTINATIONS -
           </span>
         </a>
 
-        <ul className="hidden items-center gap-8 lg:flex">
+        <ul className="hidden items-center gap-10 lg:flex">
           {LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className={`text-[12px] font-medium tracking-[0.08em] hover:text-brass-soft relative ${
+                className={`text-[12px] font-normal tracking-[0.1em] hover:text-brass-soft relative ${
                   link.label === "HOME"
                     ? "text-ivory after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:bg-ivory"
                     : "text-ivory/90"
@@ -50,18 +50,18 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           <a
             href="#contact"
-            className="border border-ivory/40 px-5 py-2.5 text-[11px] font-semibold tracking-[0.1em] text-ivory hover:border-brass hover:bg-brass hover:text-ink transition-colors"
+            className="border border-ivory/30 px-6 py-2.5 text-[11px] font-medium tracking-[0.12em] text-ivory hover:border-brass hover:bg-brass hover:text-ink transition-colors"
           >
             BOOK A SITE VISIT
           </a>
           <button
             aria-label="Menu"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/40 text-ivory hover:border-brass hover:text-brass"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-ivory/30 text-ivory hover:border-brass hover:text-brass"
           >
-            <Menu size={16} />
+            <Menu size={18} strokeWidth={1.5} />
           </button>
         </div>
 

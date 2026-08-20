@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10">
         <div className="max-w-xl pl-0 sm:pl-8">
 
-          <h1 className="font-display text-[2.9rem] leading-[1.05] text-ivory sm:text-6xl md:text-7xl">
+          <h1 className="font-display text-[2.9rem] leading-[1.05] text-ivory sm:text-6xl md:text-[80px]">
             <span className="block font-light">Building</span>
             <span className="block font-medium italic text-brass-soft">
               Nature-Inspired
@@ -29,7 +29,7 @@ export default function Hero() {
             <span className="block font-light whitespace-nowrap">Luxury Destinations</span>
           </h1>
 
-          <p className="mt-8 max-w-sm text-[13px] leading-relaxed text-ivory/70">
+          <p className="mt-8 max-w-sm text-[13px] tracking-wide leading-relaxed text-ivory/80">
             Advaitam creates exceptional spaces that<br className="hidden sm:block" />
             harmonize luxury, nature and timeless living.
           </p>
@@ -57,24 +57,24 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-6 top-48 z-10 hidden flex-col items-center sm:left-10 sm:flex">
+      <div className="absolute bottom-12 left-6 z-10 hidden flex-col items-center sm:left-12 sm:flex">
         <span className="text-[10px] font-semibold tracking-[0.2em] text-ivory/70">01</span>
         
-        <div className="mt-4 flex flex-col items-center gap-1.5">
-          <div className="h-1 w-1 rounded-full bg-brass-soft"></div>
+        <div className="mt-4 flex flex-col items-center gap-2">
+          <div className="h-1 w-1 rounded-full bg-ivory/30"></div>
           <div className="h-1 w-1 rounded-full bg-ivory/30"></div>
           <div className="h-1 w-1 rounded-full bg-ivory/30"></div>
         </div>
 
-        <div className="my-4 w-px flex-grow bg-ivory/30"></div>
+        <div className="my-4 h-40 w-px bg-brass-soft"></div>
 
-        <span className="text-[10px] font-semibold tracking-[0.2em] text-ivory/40">05</span>
+        <span className="text-[10px] font-semibold tracking-[0.2em] text-ivory/70">05</span>
         
-        <div className="mt-4 flex flex-col items-center gap-2">
-          <span className="text-[10px] font-semibold tracking-[0.2em] text-ivory/60">
+        <div className="mt-4 flex flex-col items-center">
+          <span className="text-[9px] font-bold tracking-[0.25em] text-ivory/60">
             SCROLL
           </span>
-          <ArrowDown size={14} className="text-ivory/60 animate-bounce" />
+          <ChevronDown size={16} className="mt-1 text-ivory/60 animate-pulse" />
         </div>
       </div>
     </section>
