@@ -72,10 +72,9 @@ export function VideoHero({
       ref={sectionRef}
       className={`group/section relative w-full h-[50vh] min-h-[450px] overflow-hidden bg-ink ${className}`}
     >
-      {/* ========== NATIVE VIDEO OR FLOATING MINI-PLAYER ========== */}
       <div 
         className={isFloating 
-          ? "fixed bottom-6 right-6 z-50 w-72 sm:w-80 aspect-video shadow-2xl rounded-lg overflow-hidden transition-all duration-300 pointer-events-auto bg-ink border border-ivory/20" 
+          ? "fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-48 sm:w-80 aspect-video shadow-2xl rounded-lg overflow-hidden transition-all duration-300 pointer-events-auto bg-ink border border-ivory/20" 
           : "absolute inset-0 z-0"
         }
       >
